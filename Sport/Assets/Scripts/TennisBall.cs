@@ -34,7 +34,6 @@ public class TennisBall : MonoBehaviour
     {
         if(collision.gameObject.CompareTag("Tennis Racket"))
         {
-            Debug.Log("hop");
             forceVector = (tennisRacket.gameObject.transform.position - lastPosition) * forceAmount;
             //forceVector.y *= 5;
             rb.AddForce(forceVector, ForceMode.Impulse);
