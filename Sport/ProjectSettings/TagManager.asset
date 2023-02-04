@@ -6,6 +6,7 @@ TagManager:
   tags:
   - Tennis Racket
   - Golf Racket
+  - Shovel
   layers:
   - Default
   - TransparentFX

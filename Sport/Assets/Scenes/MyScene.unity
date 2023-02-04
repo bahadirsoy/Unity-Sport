@@ -2686,6 +2686,11 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 5306034181088889676, guid: 8d546b16c4e7c2043b7e145c9a44b143, type: 3}
   m_PrefabInstance: {fileID: 372878108}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &374605547 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1834230878653483451, guid: a4419d6a639101c40af3572611d467c9, type: 3}
+  m_PrefabInstance: {fileID: 1835202302825720922}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &379876674
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -3227,6 +3232,82 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 6695003846789372269, guid: bae468b3a6b9ea141967f3cfbe601352, type: 3}
   m_PrefabInstance: {fileID: 478820847}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &479245668
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 479245669}
+  - component: {fileID: 479245671}
+  - component: {fileID: 479245670}
+  m_Layer: 5
+  m_Name: Plant Image
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 0
+--- !u!224 &479245669
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 479245668}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1902045920}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 0, y: 2.94}
+  m_SizeDelta: {x: 0.5, y: 5}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &479245670
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 479245668}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_Sprite: {fileID: 21300000, guid: f1cdfe5c680c5ec488a303be2424931f, type: 3}
+  m_Type: 0
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+  m_UseSpriteMesh: 0
+  m_PixelsPerUnitMultiplier: 1
+--- !u!222 &479245671
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 479245668}
+  m_CullTransparentMesh: 1
 --- !u!1001 &498375985
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -11547,7 +11628,7 @@ GameObject:
   - component: {fileID: 1636654871}
   - component: {fileID: 1636654870}
   m_Layer: 5
-  m_Name: Shovel Image
+  m_Name: Digging Image
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -12137,9 +12218,17 @@ PrefabInstance:
       propertyPath: m_Layer
       value: 7
       objectReference: {fileID: 0}
+    - target: {fileID: 113100, guid: df49161344bb1984fa65e7ccd3a06653, type: 3}
+      propertyPath: m_TagString
+      value: Shovel
+      objectReference: {fileID: 0}
     - target: {fileID: 154322, guid: df49161344bb1984fa65e7ccd3a06653, type: 3}
       propertyPath: m_Layer
       value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 154322, guid: df49161344bb1984fa65e7ccd3a06653, type: 3}
+      propertyPath: m_TagString
+      value: Shovel
       objectReference: {fileID: 0}
     - target: {fileID: 174154, guid: df49161344bb1984fa65e7ccd3a06653, type: 3}
       propertyPath: m_Name
@@ -12148,6 +12237,10 @@ PrefabInstance:
     - target: {fileID: 174154, guid: df49161344bb1984fa65e7ccd3a06653, type: 3}
       propertyPath: m_Layer
       value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 174154, guid: df49161344bb1984fa65e7ccd3a06653, type: 3}
+      propertyPath: m_TagString
+      value: Shovel
       objectReference: {fileID: 0}
     - target: {fileID: 408744, guid: df49161344bb1984fa65e7ccd3a06653, type: 3}
       propertyPath: m_RootOrder
@@ -13286,6 +13379,7 @@ RectTransform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1636654869}
+  - {fileID: 479245669}
   m_Father: {fileID: 1437866574}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -15042,7 +15136,19 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 216030413}
     - target: {fileID: 1835202301960386058, guid: a4419d6a639101c40af3572611d467c9, type: 3}
+      propertyPath: dirtPile
+      value: 
+      objectReference: {fileID: 374605547}
+    - target: {fileID: 1835202301960386058, guid: a4419d6a639101c40af3572611d467c9, type: 3}
       propertyPath: dirtImage
+      value: 
+      objectReference: {fileID: 1636654870}
+    - target: {fileID: 1835202301960386058, guid: a4419d6a639101c40af3572611d467c9, type: 3}
+      propertyPath: plantImage
+      value: 
+      objectReference: {fileID: 479245670}
+    - target: {fileID: 1835202301960386058, guid: a4419d6a639101c40af3572611d467c9, type: 3}
+      propertyPath: diggingImage
       value: 
       objectReference: {fileID: 1636654870}
     - target: {fileID: 1835202301960386058, guid: a4419d6a639101c40af3572611d467c9, type: 3}
