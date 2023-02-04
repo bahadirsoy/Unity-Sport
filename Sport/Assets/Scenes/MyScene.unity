@@ -11547,7 +11547,7 @@ GameObject:
   - component: {fileID: 1636654871}
   - component: {fileID: 1636654870}
   m_Layer: 5
-  m_Name: Image
+  m_Name: Shovel Image
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -15034,9 +15034,17 @@ PrefabInstance:
     m_TransformParent: {fileID: 562895362}
     m_Modifications:
     - target: {fileID: 1835202301960386058, guid: a4419d6a639101c40af3572611d467c9, type: 3}
+      propertyPath: dirt
+      value: 
+      objectReference: {fileID: 1636654870}
+    - target: {fileID: 1835202301960386058, guid: a4419d6a639101c40af3572611d467c9, type: 3}
       propertyPath: shovel
       value: 
       objectReference: {fileID: 216030413}
+    - target: {fileID: 1835202301960386058, guid: a4419d6a639101c40af3572611d467c9, type: 3}
+      propertyPath: dirtImage
+      value: 
+      objectReference: {fileID: 1636654870}
     - target: {fileID: 1835202301960386058, guid: a4419d6a639101c40af3572611d467c9, type: 3}
       propertyPath: diggingSound
       value: 

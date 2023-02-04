@@ -1,11 +1,12 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class Dig : MonoBehaviour
 {
     [SerializeField] private GameObject shovel;
-    [SerializeField] private GameObject dirt;
+    [SerializeField] private Image dirtImage;
     [SerializeField] private AudioSource diggingSound;
     
     void Start()
@@ -29,7 +30,7 @@ public class Dig : MonoBehaviour
 
         yield return new WaitForSeconds(diggingSound.clip.length - 0.6f);
 
-        dirt.SetActive(true);
+        dirtImage.gameObject.SetActive(false);
     }
 
     private void DigSound()
