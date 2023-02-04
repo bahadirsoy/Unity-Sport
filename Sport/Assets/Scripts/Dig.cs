@@ -8,20 +8,29 @@ public class Dig : MonoBehaviour
     [SerializeField] private GameObject shovel;
     [SerializeField] private Image dirtImage;
     [SerializeField] private AudioSource diggingSound;
+
+    private float digCooldown;
+    private float digCooldownCounter;
     
     void Start()
     {
-        
+        digCooldown = diggingSound.clip.length + 1f;
+        digCooldownCounter = digCooldown;
     }
     
     void Update()
     {
-        
+        digCooldownCounter += Time.deltaTime;
     }
 
     private void OnTriggerEnter(Collider other)
     {
-        StartCoroutine(ShovelDig());
+        if(digCooldownCounter >= digCooldown)
+        {
+            StartCoroutine(ShovelDig());
+
+            digCooldownCounter = 0f;
+        }
     }
 
     IEnumerator ShovelDig()
