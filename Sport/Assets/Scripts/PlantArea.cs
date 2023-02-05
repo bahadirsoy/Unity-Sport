@@ -7,10 +7,13 @@ public class PlantArea : MonoBehaviour
 {
     [SerializeField] private GameObject shovel;
     [SerializeField] private GameObject dirtPile;
+
     [SerializeField] private AudioSource diggingSound;
+    [SerializeField] private AudioSource plantCropSound;
     
     [SerializeField] private Image diggingImage;
     [SerializeField] private Image plantImage;
+    [SerializeField] private Image irrigationImage;
 
     private float plantActionCooldown;
     private float plantActionCooldownCounter;
@@ -33,18 +36,37 @@ public class PlantArea : MonoBehaviour
     {
         if(plantActionCooldownCounter >= plantActionCooldown)
         {
-            Debug.Log(other.gameObject.tag);
             if(plantState == "Dig" && other.gameObject.CompareTag("Shovel"))
             {
                 StartCoroutine(ShovelDig());
                 plantState = "Plant";
-            } else if(plantState == "Plant")
+            } else if(plantState == "Plant" && other.gameObject.CompareTag("Plant"))
+            {
+                StartCoroutine(PlantCrop());
+                Instantiate(other.gameObject, dirtPile.transform.position, Quaternion.identity);
+                plantState = "Irrigation";
+            } else if(plantState == "Irrigation")
             {
 
             }
 
             plantActionCooldownCounter = 0f;
         }
+    }
+
+    IEnumerator PlantCrop()
+    {
+        PlantCropSound();
+
+        yield return new WaitForSeconds(1f);
+
+        plantImage.gameObject.SetActive(false);
+        irrigationImage.gameObject.SetActive(true);
+    }
+
+    private void PlantCropSound()
+    {
+        plantCropSound.Play();
     }
 
     IEnumerator ShovelDig()
