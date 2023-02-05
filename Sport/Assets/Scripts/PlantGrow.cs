@@ -32,6 +32,8 @@ public class PlantGrow : MonoBehaviour
         {
             Instantiate(growedCornPlant, transform.position, transform.rotation);
             Destroy(gameObject);
+
+            PlantArea.plantState = "Growed";
         }
     }
 }
