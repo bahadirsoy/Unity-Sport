@@ -44,6 +44,7 @@ public class PlantArea : MonoBehaviour
             } else if(plantState == "Plant" && other.gameObject.CompareTag("Plant"))
             {
                 StartCoroutine(PlantCrop());
+                Debug.Log(other.gameObject.name);
 
                 plant = Instantiate(other.gameObject, dirtPile.transform.position, Quaternion.identity);
                 plant.layer = LayerMask.NameToLayer("Default");

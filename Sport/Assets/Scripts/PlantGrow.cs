@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class PlantGrow : MonoBehaviour
 {
+    [SerializeField] private GameObject growedCornPlant;
+
     private int waterParticleCount;
 
     // Start is called before the first frame update
@@ -28,7 +30,8 @@ public class PlantGrow : MonoBehaviour
 
         if(waterParticleCount >= 150)
         {
-            Debug.Log("buyudu");
+            Instantiate(growedCornPlant, transform.position, transform.rotation);
+            Destroy(gameObject);
         }
     }
 }
