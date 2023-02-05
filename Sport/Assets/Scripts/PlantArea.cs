@@ -7,6 +7,7 @@ public class PlantArea : MonoBehaviour
 {
     [SerializeField] private GameObject shovel;
     [SerializeField] private GameObject dirtPile;
+    private GameObject plant;
 
     [SerializeField] private AudioSource diggingSound;
     [SerializeField] private AudioSource plantCropSound;
@@ -17,16 +18,16 @@ public class PlantArea : MonoBehaviour
 
     private float plantActionCooldown;
     private float plantActionCooldownCounter;
-    private string plantState;
+    public static string plantState;
     
     void Start()
     {
-        plantActionCooldown = 5f;
+        plantActionCooldown = 2.5f;
         plantActionCooldownCounter = plantActionCooldown;
 
         plantState = "Dig";
     }
-    
+
     void Update()
     {
         plantActionCooldownCounter += Time.deltaTime;
@@ -43,11 +44,11 @@ public class PlantArea : MonoBehaviour
             } else if(plantState == "Plant" && other.gameObject.CompareTag("Plant"))
             {
                 StartCoroutine(PlantCrop());
-                Instantiate(other.gameObject, dirtPile.transform.position, Quaternion.identity);
-                plantState = "Irrigation";
-            } else if(plantState == "Irrigation")
-            {
 
+                plant = Instantiate(other.gameObject, dirtPile.transform.position, Quaternion.identity);
+                plant.layer = LayerMask.NameToLayer("Default");
+
+                plantState = "Irrigation";
             }
 
             plantActionCooldownCounter = 0f;

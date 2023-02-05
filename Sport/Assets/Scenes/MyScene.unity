@@ -1142,6 +1142,18 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5d4abfc2ffefc0e448346a5d57a4ee71, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &104415028
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 104415014}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f00e1ef399b2c6c4a936dea9746ebd5b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &119496409
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -6619,7 +6631,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &793997626
 RectTransform:
   m_ObjectHideFlags: 0
@@ -7855,6 +7867,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1231608786}
     m_Modifications:
+    - target: {fileID: 968851809965868676, guid: 8933b56f69f79b74d86cf4a94c98e126, type: 3}
+      propertyPath: CollisionModule.collidesWith.m_Bits
+      value: 129
+      objectReference: {fileID: 0}
     - target: {fileID: 968851809965868678, guid: 8933b56f69f79b74d86cf4a94c98e126, type: 3}
       propertyPath: m_RootOrder
       value: 0
@@ -7869,7 +7885,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 968851809965868678, guid: 8933b56f69f79b74d86cf4a94c98e126, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 0.325
+      value: 0.369
       objectReference: {fileID: 0}
     - target: {fileID: 968851809965868678, guid: 8933b56f69f79b74d86cf4a94c98e126, type: 3}
       propertyPath: m_LocalRotation.w
