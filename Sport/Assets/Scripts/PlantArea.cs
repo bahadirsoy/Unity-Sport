@@ -31,6 +31,11 @@ public class PlantArea : MonoBehaviour
     void Update()
     {
         plantActionCooldownCounter += Time.deltaTime;
+
+        if (plantState == "Growed")
+        {
+            irrigationImage.gameObject.SetActive(false);
+        }
     }
 
     private void OnTriggerEnter(Collider other)

@@ -13,7 +13,6 @@ public class ChangeGravityOnGrab : MonoBehaviour
 
     public void ChangeGravity()
     {
-        Debug.Log("misali");
         rb.isKinematic = false;
         rb.useGravity = true;
     }
