@@ -52,7 +52,7 @@ public class PlantArea : MonoBehaviour
                 Debug.Log(other.gameObject.name);
 
                 plant = Instantiate(other.gameObject, dirtPile.transform.position, Quaternion.identity);
-                plant.layer = LayerMask.NameToLayer("Default");
+                plant.layer = LayerMask.NameToLayer("Growable");
 
                 plantState = "Irrigation";
             }
