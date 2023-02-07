@@ -22,7 +22,7 @@ public class PlantGrow : MonoBehaviour
 
     private void OnParticleCollision(GameObject other)
     {
-        if (GetComponent<PlantArea>().plantState == "Irrigation" && waterParticleCount <= 150)
+        if (transform.parent.gameObject.GetComponent<PlantArea>().plantState == "Irrigation" && waterParticleCount <= 150)
         {
             transform.localScale += new Vector3(0.0001f, 0.001f, 0.0001f);
             waterParticleCount++;
@@ -33,7 +33,7 @@ public class PlantGrow : MonoBehaviour
             Instantiate(growedCornPlant, transform.position, transform.rotation);
             Destroy(gameObject);
 
-            GetComponent<PlantArea>().plantState = "Growed";
+            transform.parent.gameObject.GetComponent<PlantArea>().plantState = "Growed";
         }
     }
 }
