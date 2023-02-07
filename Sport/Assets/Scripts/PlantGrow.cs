@@ -12,6 +12,7 @@ public class PlantGrow : MonoBehaviour
     void Start()
     {
         waterParticleCount = 0;
+        Debug.Log(GetComponent<PlantArea>());
     }
 
     // Update is called once per frame
@@ -22,7 +23,7 @@ public class PlantGrow : MonoBehaviour
 
     private void OnParticleCollision(GameObject other)
     {
-        if (PlantArea.plantState == "Irrigation" && waterParticleCount <= 150)
+        if (GetComponent<PlantArea>().plantState == "Irrigation" && waterParticleCount <= 150)
         {
             transform.localScale += new Vector3(0.0001f, 0.001f, 0.0001f);
             waterParticleCount++;
@@ -33,7 +34,7 @@ public class PlantGrow : MonoBehaviour
             Instantiate(growedCornPlant, transform.position, transform.rotation);
             Destroy(gameObject);
 
-            PlantArea.plantState = "Growed";
+            GetComponent<PlantArea>().plantState = "Growed";
         }
     }
 }

@@ -5,7 +5,7 @@ using UnityEngine.UI;
 
 public class PlantArea : MonoBehaviour
 {
-    [SerializeField] private GameObject shovel;
+    //[SerializeField] private GameObject shovel;
     [SerializeField] private GameObject dirtPile;
     private GameObject plant;
 
@@ -18,7 +18,7 @@ public class PlantArea : MonoBehaviour
 
     private float plantActionCooldown;
     private float plantActionCooldownCounter;
-    public static string plantState;
+    public string plantState;
     
     void Start()
     {
