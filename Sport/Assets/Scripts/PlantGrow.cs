@@ -12,7 +12,6 @@ public class PlantGrow : MonoBehaviour
     void Start()
     {
         waterParticleCount = 0;
-        Debug.Log(GetComponent<PlantArea>());
     }
 
     // Update is called once per frame
