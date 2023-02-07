@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: 8064252557344857884}
   - component: {fileID: 8063042413661705133}
   - component: {fileID: 6604739960892956630}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Growed_Turnip_Fruit
   m_TagString: Untagged
   m_Icon: {fileID: 0}
