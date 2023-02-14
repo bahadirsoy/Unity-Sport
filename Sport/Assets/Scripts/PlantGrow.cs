@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class PlantGrow : MonoBehaviour
 {
-    [SerializeField] private GameObject growedCornPlant;
+    [SerializeField] private GameObject growedPlant;
 
     private int waterParticleCount;
 
@@ -24,13 +24,13 @@ public class PlantGrow : MonoBehaviour
     {
         if (transform.parent.gameObject.GetComponent<PlantArea>().plantState == "Irrigation" && waterParticleCount <= 150)
         {
-            transform.localScale += new Vector3(0.0001f, 0.001f, 0.0001f);
+            transform.localScale += new Vector3(0.001f, 0.01f, 0.001f);
             waterParticleCount++;
         }
 
         if(waterParticleCount >= 150)
         {
-            Instantiate(growedCornPlant, transform.position, transform.rotation);
+            Instantiate(growedPlant, transform.position, transform.rotation);
             Destroy(gameObject);
 
             transform.parent.gameObject.GetComponent<PlantArea>().plantState = "Growed";
