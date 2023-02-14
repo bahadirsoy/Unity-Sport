@@ -30,7 +30,10 @@ public class PlantGrow : MonoBehaviour
 
         if(waterParticleCount >= 150)
         {
-            Instantiate(growedPlant, transform.position, transform.rotation);
+            Debug.Log("burdayiz");
+            GameObject obj = Instantiate(growedPlant, transform.position, transform.rotation);
+            obj.GetComponent<Recenter>().RecenterObject();
+
             Destroy(gameObject);
 
             transform.parent.gameObject.GetComponent<PlantArea>().plantState = "Growed";

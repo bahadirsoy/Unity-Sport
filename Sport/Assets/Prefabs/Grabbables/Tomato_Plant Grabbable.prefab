@@ -16,6 +16,7 @@ GameObject:
   - component: {fileID: 6598728753106616830}
   - component: {fileID: 6598728753106616827}
   - component: {fileID: 6598728753106616807}
+  - component: {fileID: 7422790827996461739}
   m_Layer: 7
   m_Name: Tomato_Plant Grabbable
   m_TagString: Plant
@@ -36,6 +37,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 6598728753081395542}
+  - {fileID: 3008949656862180709}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -271,7 +273,19 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   growedPlant: {fileID: 2038059498987455879, guid: 837ebf0f1ab896047accfa716a20f2a5, type: 3}
-  growedPlantPosition: {fileID: 0}
+--- !u!114 &7422790827996461739
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6598030015684947704}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fa4e110e14356ea4698b4c3960bb7b43, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  center: {fileID: 3008949656862180709}
 --- !u!1 &6598728753081395541
 GameObject:
   m_ObjectHideFlags: 0
@@ -302,4 +316,35 @@ Transform:
   m_Children: []
   m_Father: {fileID: 6601521874000299194}
   m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &7621064988708412472
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 3008949656862180709}
+  m_Layer: 7
+  m_Name: Center
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &3008949656862180709
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7621064988708412472}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: -0.184}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 6601521874000299194}
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}

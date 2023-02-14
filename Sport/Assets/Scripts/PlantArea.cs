@@ -51,6 +51,8 @@ public class PlantArea : MonoBehaviour
                 StartCoroutine(PlantCrop());
 
                 plant = Instantiate(other.gameObject, dirtPile.transform.position, Quaternion.identity);
+
+                plant.GetComponent<Recenter>().RecenterObject();
                 plant.layer = LayerMask.NameToLayer("Growable");
                 plant.transform.parent = gameObject.transform;
 

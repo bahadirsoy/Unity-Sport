@@ -24,7 +24,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1872596327855164202}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.207, y: 0, z: 0.072}
+  m_LocalPosition: {x: -0.141, y: 0, z: -0.099}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -43,6 +43,7 @@ GameObject:
   - component: {fileID: 5532315816694827467}
   - component: {fileID: 5540044207778671495}
   - component: {fileID: 5499133817847474419}
+  - component: {fileID: 4606306646198418195}
   m_Layer: 0
   m_Name: Growed_Corn_Plant
   m_TagString: Untagged
@@ -133,6 +134,19 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 30
   m_Mesh: {fileID: 4300012, guid: b69b26c8b73b8bd49bf243bbe541a2e0, type: 3}
+--- !u!114 &4606306646198418195
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5525929082041609043}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fa4e110e14356ea4698b4c3960bb7b43, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  center: {fileID: 3000730772212931028}
 --- !u!1001 &5843012042327553757
 PrefabInstance:
   m_ObjectHideFlags: 0

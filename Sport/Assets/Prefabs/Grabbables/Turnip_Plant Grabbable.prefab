@@ -47,6 +47,7 @@ GameObject:
   - component: {fileID: 6808626533875735101}
   - component: {fileID: 6808626533875735094}
   - component: {fileID: 6808626533875735090}
+  - component: {fileID: 8862534957670471890}
   m_Layer: 7
   m_Name: Turnip_Plant Grabbable
   m_TagString: Plant
@@ -67,6 +68,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 6808626533921272479}
+  - {fileID: 6238290649666800665}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -302,4 +304,47 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   growedPlant: {fileID: 4129666668843532136, guid: 477ac869e167d9648972fcfd3e672fc9, type: 3}
-  growedPlantPosition: {fileID: 0}
+--- !u!114 &8862534957670471890
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6809042703512114558}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fa4e110e14356ea4698b4c3960bb7b43, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  center: {fileID: 6238290649666800665}
+--- !u!1 &8946951420211994807
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 6238290649666800665}
+  m_Layer: 7
+  m_Name: Center
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &6238290649666800665
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8946951420211994807}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -0.163, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 6805832112767749728}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
