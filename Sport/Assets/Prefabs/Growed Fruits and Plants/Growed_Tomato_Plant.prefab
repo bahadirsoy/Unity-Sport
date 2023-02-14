@@ -42,9 +42,8 @@ GameObject:
   - component: {fileID: 2037065384288612293}
   - component: {fileID: 2035086643034190021}
   - component: {fileID: 2025106571955045525}
-  - component: {fileID: 2065030708577068983}
   - component: {fileID: 2777569063087741747}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Growed_Tomato_Plant
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -121,20 +120,6 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!64 &2065030708577068983
-MeshCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2038059498987455879}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 4
-  m_Convex: 0
-  m_CookingOptions: 30
-  m_Mesh: {fileID: 4300010, guid: b69b26c8b73b8bd49bf243bbe541a2e0, type: 3}
 --- !u!114 &2777569063087741747
 MonoBehaviour:
   m_ObjectHideFlags: 0

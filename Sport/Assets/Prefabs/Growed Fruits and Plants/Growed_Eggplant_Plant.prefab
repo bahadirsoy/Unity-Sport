@@ -11,9 +11,8 @@ GameObject:
   - component: {fileID: 8914073741212062012}
   - component: {fileID: 8921119030602924034}
   - component: {fileID: 8929130940749783034}
-  - component: {fileID: 8887937977279849490}
   - component: {fileID: 7560699643732023160}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Growed_Eggplant_Plant
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -89,20 +88,6 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!64 &8887937977279849490
-MeshCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8915049918301429738}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 4
-  m_Convex: 0
-  m_CookingOptions: 30
-  m_Mesh: {fileID: 4300006, guid: b69b26c8b73b8bd49bf243bbe541a2e0, type: 3}
 --- !u!114 &7560699643732023160
 MonoBehaviour:
   m_ObjectHideFlags: 0
