@@ -6690,6 +6690,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: fd8e0760db14a534a89257f68a4f2a8c, type: 3}
+--- !u!1 &1144429157 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1614456997847804312, guid: 181e7f4e8e469bb46b1e9106fcef1af1, type: 3}
+  m_PrefabInstance: {fileID: 1613477875722447894}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1149544774
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -8107,7 +8112,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 1787366121}
         m_TargetAssemblyTypeName: PlantByVoice, Assembly-CSharp
-        m_MethodName: Plant
+        m_MethodName: PlantCommand
         m_Mode: 0
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -10301,6 +10306,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1787366120}
   - component: {fileID: 1787366121}
+  - component: {fileID: 1787366122}
   m_Layer: 0
   m_Name: Plant Manager
   m_TagString: Untagged
@@ -10335,6 +10341,23 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 972332bc584773e4c8d728d04415f753, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  plantAreas: {fileID: 247032861}
+  carrotPlant: {fileID: 1144429157}
+  eggplantPlant: {fileID: 1811270225}
+--- !u!114 &1787366122
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1787366119}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d0510f96cb5bc0546ae44da9c35d4892, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  voiceInput: {fileID: -1907791252918189526, guid: c348712bda248c246b8c49b3db54643f, type: 3}
+  appVoice: {fileID: 911886341}
 --- !u!1001 &1789686917
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -10469,6 +10492,11 @@ PrefabInstance:
 Transform:
   m_CorrespondingSourceObject: {fileID: 3008297296413678391, guid: cb422acdc199d6e42910f589b81c283b, type: 3}
   m_PrefabInstance: {fileID: 1800448723}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &1811270225 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2686540745455823430, guid: 36deb5d295ba9d04fa2ceb909850aa40, type: 3}
+  m_PrefabInstance: {fileID: 2687258180992811736}
   m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1813509930
 PrefabInstance:

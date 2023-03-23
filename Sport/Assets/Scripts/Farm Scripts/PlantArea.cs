@@ -68,6 +68,19 @@ public class PlantArea : MonoBehaviour
         plantState = "Irrigation";
     }
 
+    public void Plant(GameObject other)
+    {
+        StartCoroutine(PlantCrop());
+
+        plant = Instantiate(other.gameObject, dirtPile.transform.position, Quaternion.identity);
+
+        plant.GetComponent<Recenter>().RecenterObject();
+        plant.layer = LayerMask.NameToLayer("Growable");
+        plant.transform.parent = gameObject.transform;
+
+        plantState = "Irrigation";
+    }
+
     IEnumerator PlantCrop()
     {
         PlantCropSound();

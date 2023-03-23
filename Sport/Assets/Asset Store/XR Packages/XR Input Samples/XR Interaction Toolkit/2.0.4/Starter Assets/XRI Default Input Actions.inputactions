@@ -1165,6 +1165,34 @@
                     "isPartOfComposite": false
                 }
             ]
+        },
+        {
+            "name": "VoiceManager",
+            "id": "62b3b4e6-b8ec-44ab-a2d1-dfd0e15ad9ee",
+            "actions": [
+                {
+                    "name": "ActivateVoice",
+                    "type": "Button",
+                    "id": "b2194a4b-1306-4dc9-b0c1-9066257937c9",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                }
+            ],
+            "bindings": [
+                {
+                    "name": "",
+                    "id": "8759e237-720f-45e9-86f2-d9bf59aa408b",
+                    "path": "<XRController>{LeftHand}/primaryButton",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "ActivateVoice",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                }
+            ]
         }
     ],
     "controlSchemes": [
