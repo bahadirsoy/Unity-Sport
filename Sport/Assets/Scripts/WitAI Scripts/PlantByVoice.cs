@@ -7,12 +7,15 @@ public class PlantByVoice : MonoBehaviour
     [SerializeField] Transform plantAreas;
 
     [SerializeField] GameObject carrotPlant;
+    [SerializeField] GameObject cornPlant;
     [SerializeField] GameObject eggplantPlant;
+    [SerializeField] GameObject tomatoPlant;
+    [SerializeField] GameObject turnipPlant;
 
     public void PlantCommand(string[] values)
     {
-        Debug.Log("Intent: " + values[0]);
-        Debug.Log("Place: " + values[1]);
+        /*Debug.Log("Intent: " + values[0]);
+        Debug.Log("Place: " + values[1]);*/
 
         if(values[0] == "plant")
         {
@@ -25,8 +28,17 @@ public class PlantByVoice : MonoBehaviour
                         case "carrot":
                             plantArea.gameObject.GetComponent<PlantArea>().Plant(carrotPlant);
                             break;
+                        case "corn":
+                            plantArea.gameObject.GetComponent<PlantArea>().Plant(cornPlant);
+                            break;
                         case "eggplant":
                             plantArea.gameObject.GetComponent<PlantArea>().Plant(eggplantPlant);
+                            break;
+                        case "tomato":
+                            plantArea.gameObject.GetComponent<PlantArea>().Plant(tomatoPlant);
+                            break;
+                        case "turnip":
+                            plantArea.gameObject.GetComponent<PlantArea>().Plant(turnipPlant);
                             break;
                     }
                 }
