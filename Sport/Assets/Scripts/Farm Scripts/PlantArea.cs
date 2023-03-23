@@ -48,19 +48,24 @@ public class PlantArea : MonoBehaviour
                 plantState = "Plant";
             } else if(plantState == "Plant" && other.gameObject.CompareTag("Plant"))
             {
-                StartCoroutine(PlantCrop());
-
-                plant = Instantiate(other.gameObject, dirtPile.transform.position, Quaternion.identity);
-
-                plant.GetComponent<Recenter>().RecenterObject();
-                plant.layer = LayerMask.NameToLayer("Growable");
-                plant.transform.parent = gameObject.transform;
-
-                plantState = "Irrigation";
+                Plant(other);
             }
 
             plantActionCooldownCounter = 0f;
         }
+    }
+
+    public void Plant(Collider other)
+    {
+        StartCoroutine(PlantCrop());
+
+        plant = Instantiate(other.gameObject, dirtPile.transform.position, Quaternion.identity);
+
+        plant.GetComponent<Recenter>().RecenterObject();
+        plant.layer = LayerMask.NameToLayer("Growable");
+        plant.transform.parent = gameObject.transform;
+
+        plantState = "Irrigation";
     }
 
     IEnumerator PlantCrop()
