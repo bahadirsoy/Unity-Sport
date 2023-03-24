@@ -16,7 +16,6 @@ public class WitAIVoiceManager : MonoBehaviour
 
     void ActivateVoice(InputAction.CallbackContext context)
     {
-        Debug.Log("Activate");
         ActivateWit();
     }
 

@@ -14,10 +14,9 @@ public class PlantByVoice : MonoBehaviour
 
     public void PlantCommand(string[] values)
     {
-        /*Debug.Log("Intent: " + values[0]);
-        Debug.Log("Place: " + values[1]);*/
+        Debug.Log("Plant Manager: " + "Intent: " + values[0] + " Place: " + values[1]);
 
-        if(values[0] == "plant")
+        if (values[0] == "action")
         {
             foreach (Transform plantArea in plantAreas)
             {
@@ -39,6 +38,8 @@ public class PlantByVoice : MonoBehaviour
                             break;
                         case "turnip":
                             plantArea.gameObject.GetComponent<PlantArea>().Plant(turnipPlant);
+                            break;
+                        default:
                             break;
                     }
                 }
