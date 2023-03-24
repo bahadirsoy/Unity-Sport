@@ -7,10 +7,7 @@ namespace OpenAI
 {
     public class DallEManager : MonoBehaviour
     {
-        [SerializeField] private InputField inputField;
-        [SerializeField] private Button button;
         [SerializeField] private Image image;
-        [SerializeField] private GameObject loadingLabel;
 
         private OpenAIApi openai = new OpenAIApi();
 
@@ -18,22 +15,19 @@ namespace OpenAI
         {
             Debug.Log("DallE Manager: " + "Intent: " + values[0] + " Action type: " + values[2]);
 
-            if(values[2] == "Draw")
+            if(values[2].Contains("Draw"))
             {
-                Debug.Log("yessirrr");
+                SendImageRequest();
             }
         }
 
         private async void SendImageRequest()
         {
             image.sprite = null;
-            button.enabled = false;
-            inputField.enabled = false;
-            loadingLabel.SetActive(true);
 
             var response = await openai.CreateImage(new CreateImageRequest
             {
-                Prompt = inputField.text,
+                Prompt = "fat orange cat",
                 Size = ImageSize.Size256
             });
 
@@ -50,6 +44,7 @@ namespace OpenAI
                     Texture2D texture = new Texture2D(2, 2);
                     texture.LoadImage(request.downloadHandler.data);
                     var sprite = Sprite.Create(texture, new Rect(0, 0, 256, 256), Vector2.zero, 1f);
+                    Debug.Log("burdayiz");
                     image.sprite = sprite;
                 }
             }
@@ -57,10 +52,6 @@ namespace OpenAI
             {
                 Debug.LogWarning("No image was created from this prompt.");
             }
-
-            button.enabled = true;
-            inputField.enabled = true;
-            loadingLabel.SetActive(false);
         }
     }
 }

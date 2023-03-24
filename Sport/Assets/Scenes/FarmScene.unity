@@ -8242,6 +8242,15 @@ MonoBehaviour:
     floatingPointComparisonTolerance: 0.00009999999747378752
     allowConfidenceOverlap: 0
     confidenceRanges: []
+  - path: entities.draw_action:draw_action[0].value
+    witValueReference: {fileID: 0}
+    contentRequired: 1
+    matchMethod: 0
+    comparisonMethod: 0
+    matchValue: 
+    floatingPointComparisonTolerance: 0.00009999999747378752
+    allowConfidenceOverlap: 0
+    confidenceRanges: []
   formattedValueEvents: []
   onMultiValueEvent:
     m_PersistentCalls:
@@ -11741,10 +11750,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 00f85ea60b96d3c41a4a6e22f2d2fad0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  inputField: {fileID: 0}
-  button: {fileID: 0}
-  image: {fileID: 0}
-  loadingLabel: {fileID: 0}
+  image: {fileID: 1654088368}
 --- !u!1001 &2083419636
 PrefabInstance:
   m_ObjectHideFlags: 0
