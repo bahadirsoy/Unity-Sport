@@ -4965,6 +4965,15 @@ MonoBehaviour:
     floatingPointComparisonTolerance: 0.00009999999747378752
     allowConfidenceOverlap: 0
     confidenceRanges: []
+  - path: entities.plant_type:plant_type[0].value
+    witValueReference: {fileID: 0}
+    contentRequired: 1
+    matchMethod: 0
+    comparisonMethod: 0
+    matchValue: 
+    floatingPointComparisonTolerance: 0.00009999999747378752
+    allowConfidenceOverlap: 0
+    confidenceRanges: []
   formattedValueEvents: []
   onMultiValueEvent:
     m_PersistentCalls:

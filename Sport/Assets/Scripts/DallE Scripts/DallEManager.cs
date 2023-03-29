@@ -15,8 +15,14 @@ namespace OpenAI
         public void DrawCommand(string[] values)
         {
             
-            Debug.Log("DallE Manager: " + "Intent: " + values[0] + " Action type: " + values[1]);
-            SendImageRequest(values[1]);
+            Debug.Log("DallE Manager: " + "Intent: " + values[0] + " Action type: " + values[1] + " Plant type: " + values[2]);
+            if(values[1] == "")
+            {
+                SendImageRequest(values[2]);
+            } else
+            {
+                SendImageRequest(values[1]);
+            }
         }
 
         private async void SendImageRequest(string text)
