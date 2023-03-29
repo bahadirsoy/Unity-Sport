@@ -7,27 +7,23 @@ namespace OpenAI
 {
     public class DallEManager : MonoBehaviour
     {
-        [SerializeField] private Image image;
+        [SerializeField] Transform images;
+        [SerializeField] Transform player;
 
         private OpenAIApi openai = new OpenAIApi();
 
         public void DrawCommand(string[] values)
         {
-            Debug.Log("DallE Manager: " + "Intent: " + values[0] + " Action type: " + values[2]);
-
-            if(values[2].Contains("Draw"))
-            {
-                SendImageRequest();
-            }
+            
+            Debug.Log("DallE Manager: " + "Intent: " + values[0] + " Action type: " + values[1]);
+            SendImageRequest(values[1]);
         }
 
-        private async void SendImageRequest()
+        private async void SendImageRequest(string text)
         {
-            image.sprite = null;
-
             var response = await openai.CreateImage(new CreateImageRequest
             {
-                Prompt = "fat orange cat",
+                Prompt = text,
                 Size = ImageSize.Size256
             });
 
@@ -44,8 +40,29 @@ namespace OpenAI
                     Texture2D texture = new Texture2D(2, 2);
                     texture.LoadImage(request.downloadHandler.data);
                     var sprite = Sprite.Create(texture, new Rect(0, 0, 256, 256), Vector2.zero, 1f);
-                    Debug.Log("burdayiz");
-                    image.sprite = sprite;
+
+                    Image closestImage = null;
+                    float distance = 0;
+                    int i = 0;
+                    foreach(Transform image in images)
+                    {
+                        if(i == 0)
+                        {
+                            closestImage = image.gameObject.GetComponent<Image>();
+                            distance = Vector3.Distance(player.position, image.position);
+                        }
+                        else
+                        {
+                            if(Vector3.Distance(player.position, image.position) < distance)
+                            {
+                                closestImage = image.gameObject.GetComponent<Image>();
+                                distance = Vector3.Distance(player.position, image.position);
+                            }
+                        }
+                        i++;
+                    }
+                    closestImage.sprite = sprite;
+
                 }
             }
             else
