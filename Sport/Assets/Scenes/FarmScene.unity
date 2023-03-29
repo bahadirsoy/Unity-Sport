@@ -4909,7 +4909,7 @@ GameObject:
   - component: {fileID: 815105996}
   - component: {fileID: 815105997}
   m_Layer: 0
-  m_Name: Response Handler (1)
+  m_Name: Dalle Response Handler
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -8455,7 +8455,7 @@ GameObject:
   - component: {fileID: 1325353600}
   - component: {fileID: 1325353601}
   m_Layer: 0
-  m_Name: Response Handler
+  m_Name: Plant Response Handler
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
