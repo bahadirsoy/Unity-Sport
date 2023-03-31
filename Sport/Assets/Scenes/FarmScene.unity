@@ -807,7 +807,7 @@ GameObject:
   - component: {fileID: 100777238}
   - component: {fileID: 100777237}
   m_Layer: 0
-  m_Name: Plant Manager (1)
+  m_Name: Create Manager
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -854,7 +854,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 230830ae3a4f2404da75afc086d5b930, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  carrot: {fileID: 1614456997847804312, guid: 181e7f4e8e469bb46b1e9106fcef1af1, type: 3}
+  tomato: {fileID: 4431563982683634797, guid: 45e9b33cafd48384aa37bdbe8c438034, type: 3}
+  eggplant: {fileID: 8378323899534148178, guid: 61a363daa0f81714783ddc7a47acdc14, type: 3}
+  corn: {fileID: 6126413617386203345, guid: 97897bc402588414095b44f2cd9e9e98, type: 3}
+  chair: {fileID: 1578530219999206, guid: 5a652a60006d6ec46980e623412396f9, type: 3}
+  createPosition: {fileID: 864579275}
 --- !u!1001 &143332039
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -5241,7 +5245,7 @@ GameObject:
   m_Component:
   - component: {fileID: 864579275}
   m_Layer: 6
-  m_Name: Create Location
+  m_Name: Create Position
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -5255,7 +5259,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 864579274}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0.831}
+  m_LocalPosition: {x: 0, y: 0.897, z: 1.437}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -11440,7 +11444,7 @@ GameObject:
   - component: {fileID: 1958203545}
   - component: {fileID: 1958203546}
   m_Layer: 0
-  m_Name: Plant Response Handler (1)
+  m_Name: Create Response Handler
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
